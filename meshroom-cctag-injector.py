@@ -60,8 +60,13 @@ if __name__ == "__main__":
 
     json_output = json.dumps(mg_file_json, indent=4)
 
-    csv_file_name = csv_file_path.split(sep="\\")[-1].split(".")[0]
-    output_file_path = mg_file_path[:-3] + f" - {csv_file_name}" + mg_file_path[-3:]
+    # Keep for future, for now just overwrite
+    
+    #csv_file_name = csv_file_path.split(sep="\\")[-1].split(".")[0]
+    #output_file_path = mg_file_path[:-3] + f" - {csv_file_name}" + mg_file_path[-3:]
+    
+    # Just overwrite the input file
+    output_file_path = mg_file_path
 
     with open(output_file_path, 'w') as outfile:
         outfile.write(json_output)
